@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+:root {
+  /* Colors
+    Primary */
+  --Cyan: hsl(180, 66%, 49%);
+  --Dark-Violet: hsl(257, 27%, 26%);
+  /* Secondary */
+  --Red: hsl(0, 87%, 67%);
+  /* Neutral */
+  --Gray: hsl(0, 0%, 75%);
+  --Grayish-Violet: hsl(257, 7%, 63%);
+  --Very-Dark-Blue: hsl(255, 11%, 22%);
+  --Very-Dark-Violet: hsl(260, 8%, 14%);
+  --Very-light-gray: hsl(228, 33%, 97%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-gray {
+  color: var(--Gray);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.text-white-bold {
   color: white;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.App {
+  /* background-color: var(--Very-light-gray); */
+  height: 100vh;
+}
+/************** 
+Main Content
+***************/
+.main-content {
+  text-align: center;
+  background-color: var(--Very-light-gray);
+}
+.main-content-header {
+  font-size: 3em;
+  font-weight: bolder;
+}
+.c1 {
+  background-color: white;
+  padding-bottom: 2em;
+}
+.c1text {
+  margin: 1em 1em 5em 1em;
+  padding: 1em 0;
+}
+.c1text h1 {
+  font-size: 48px;
+  font-weight: bolder;
+}
+.c1text p {
+  color: var(--Gray);
+}
+.icon-box {
+  display: flex;
+}
+.icon-box img {
+  margin: 1em;
+}
+/********
+ Button
+*********/
+.green-btn {
+  background-color: var(--Cyan);
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+}
+.gs-btn {
+  width: 50%;
+  max-width: 190px;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+}
+.gs2-btn {
+  width: 100%;
+  height: 3rem;
+}
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--Gray);
+  opacity: 1; /* Firefox */
+}
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--Gray);
+}
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--Gray);
 }
 
-.App-link {
-  color: #61dafb;
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .gs2-btn {
+    max-width: 200px;
+  }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .c1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 6em;
   }
-  to {
-    transform: rotate(360deg);
+  .c1text {
+    text-align: start;
+    margin-left: 3em;
   }
+  .c1 img {
+    max-width: 40%;
+  }
+  .icon-box {
+    flex-direction: column;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .icon-box {
+    flex-direction: row;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }

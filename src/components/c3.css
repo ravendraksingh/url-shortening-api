@@ -1,0 +1,101 @@
+.c3 {
+  background-color: var(--Very-light-gray);
+  text-align: center;
+}
+.c3 h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.c3 p {
+  color: var(--Gray);
+  padding: 0 1em;
+}
+.c3p1 {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 1em;
+  margin-bottom: 6em;
+}
+.c3p2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.c3box-bg-white {
+  width: 352px;
+  height: 300px;
+  max-width: 352px;
+  /* margin: 0 1em 0em 1em; */
+  margin: 0;
+  background-color: white;
+  padding-bottom: 2em;
+}
+.c3imgbox {
+  position: relative;
+  top: -45px;
+  left: calc(176px - 45px);
+  background-color: var(--Very-Dark-Violet);
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c3-img {
+  width: 48px;
+}
+.hr-line {
+  width: 48px;
+  display: block;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--Cyan);
+  opacity: 1;
+}
+.vl {
+  border-left: 5px solid var(--Cyan);
+  height: 90px;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .c3p1 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .c3p2 {
+    flex-direction: row;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .c3 {
+    padding-bottom: 4em;
+  }
+  .c3p2 {
+    /* align-items: flex-start; */
+  }
+  .c3box-bg-white {
+    margin: 0;
+    margin-bottom: 6em;
+  }
+  .c3p2b1 {
+    transform: translateY(-15%);
+  }
+  .c3p2b3 {
+    transform: translateY(15%);
+  }
+  .c3p2b1-hr {
+    transform: translateY(-1000%);
+  }
+}
