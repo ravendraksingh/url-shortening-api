@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./shortenbox.css";
 import bgShortenMobile from "../assets/bg-shorten-mobile.svg";
 
-const ShortenBox = () => {
+const ShortenBox = ({ onUrlSubmit }) => {
   const [longurl, setLongurl] = useState("");
-  const [shorturl, setShorturl] = useState("");
+  const [shorturl, setShorturl] = useState("dsfadsfasdf");
   //   console.log("longurl=>", longurl);
   const handleUrlChange = (event) => {
     const value = event.target.value.trim();
@@ -14,17 +14,7 @@ const ShortenBox = () => {
   };
 
   const handleClick = () => {
-    const apiUrl = "https://cleanuri.com/api/v1/shorten";
-    fetch(apiUrl, {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(longurl),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setShorturl(data.result_url);
-      });
+    onUrlSubmit(longurl);
   };
 
   return (
